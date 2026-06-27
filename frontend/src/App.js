@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
 import "@/App.css";
 
-const EMAIL = "sofijareich@gmail.com";
+const EMAIL = "hallo@sparkside.ch";
 const MAILTO =
-  "mailto:sofijareich@gmail.com?subject=Erstgespr%C3%A4ch%20%E2%80%93%2020%20Minuten&body=Guten%20Tag%20Frau%20Reich%2C%0A%0Aich%20w%C3%BCrde%20gerne%20unverbindlich%20pr%C3%BCfen%2C%20ob%20eine%20Zusammenarbeit%20passt.";
+  "mailto:hallo@sparkside.ch?subject=Erstgespr%C3%A4ch%20%E2%80%93%2020%20Minuten&body=Guten%20Tag%20Frau%20Reich%2C%0A%0Aich%20w%C3%BCrde%20gerne%20unverbindlich%20pr%C3%BCfen%2C%20ob%20eine%20Zusammenarbeit%20passt.";
 
 function useReveal() {
   const ref = useRef(null);
@@ -33,18 +33,12 @@ const Nav = () => (
         Reich
       </a>
       <div className="nav-links">
-        <a href="#leistungen" className="nav-link" data-testid="nav-leistungen">
-          Leistungen
-        </a>
-        <a href="#referenzen" className="nav-link" data-testid="nav-referenzen">
-          Referenzen
-        </a>
-        <a href="#ueber" className="nav-link" data-testid="nav-ueber">
-          Über mich
-        </a>
-        <a href={MAILTO} className="nav-link" data-testid="nav-kontakt">
-          Kontakt
-        </a>
+        <a href="#leistungen" className="nav-link" data-testid="nav-leistungen">Leistungen</a>
+        <a href="#prozess" className="nav-link" data-testid="nav-prozess">Prozess</a>
+        <a href="#ai" className="nav-link" data-testid="nav-ai">AI</a>
+        <a href="#referenzen" className="nav-link" data-testid="nav-referenzen">Referenzen</a>
+        <a href="#ueber" className="nav-link" data-testid="nav-ueber">Über mich</a>
+        <a href={MAILTO} className="nav-link" data-testid="nav-kontakt">Kontakt</a>
       </div>
     </div>
   </nav>
@@ -61,10 +55,9 @@ const Hero = () => (
         Ihre Expertise verdient mehr <em>Sichtbarkeit.</em>
       </h1>
       <p className="body body-lg hero-body reveal" data-testid="hero-body">
-        Die meisten meiner Kunden haben mich nicht aktiv gesucht. Irgendwann
-        haben sie gemerkt, dass ihre Online-Präsenz nicht mehr widerspiegelt,
-        was sie wirklich leisten — und dann hat jemand meinen Namen
-        weitergegeben.
+        Meine ersten Kunden habe ich nicht durch Empfehlungen gewonnen. Ich habe
+        einfach angerufen, eine ehrliche Einschätzung gegeben — und angefangen.
+        Genau diese Direktheit bringe ich in jedes Projekt.
       </p>
       <div className="hero-actions reveal">
         <a href={MAILTO} className="btn-gold" data-testid="hero-cta">
@@ -140,14 +133,19 @@ const Leistungen = () => (
 
 const referenzen = [
   {
-    name: "LUKB",
-    tag: "Luzerner Kantonalbank",
-    desc: "Begleitung einzelner digitaler Massnahmen im Umfeld einer etablierten Finanzinstitution — mit der nötigen Diskretion und einem Verständnis dafür, wie konservativ ein solches Haus auftreten muss.",
+    name: "Hotel Sempachersee",
+    tag: "Event Content · Kanton Luzern",
+    desc: "Content Creation für einen Hospitality-Event — Bild- und Videomaterial das zeigt, wie ein Anlass wirkt wenn er professionell festgehalten wird. Entstanden im Rahmen eines LUKB-Events.",
+  },
+  {
+    name: "All In One Bar",
+    tag: "Web & Social Media",
+    desc: "Website-Relaunch und Social-Media-Content für eine Gastro-Location in der Region. Erstes Projekt, das zeigt wie digitale Präsenz und lokale Reichweite zusammenspielen.",
   },
   {
     name: "SwissUnited",
-    tag: "Laufend",
-    desc: "Fortlaufende Zusammenarbeit an Sichtbarkeit und digitaler Positionierung. Ein Mandat, das zeigt, wie sich kontinuierliche Arbeit über die Zeit in Substanz übersetzt.",
+    tag: "Laufend · Finanzdienstleister",
+    desc: "Fortlaufende Zusammenarbeit an Sichtbarkeit und digitaler Positionierung. Ein Mandat, das zeigt wie sich kontinuierliche Arbeit über die Zeit in Substanz übersetzt.",
   },
 ];
 
@@ -171,6 +169,115 @@ const Referenzen = () => (
               </div>
               <div className="ref-vline" aria-hidden="true" />
               <p className="ref-desc">{r.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const prozessSchritte = [
+  {
+    num: "01",
+    title: "Analyse & Gespräch",
+    body: "Ich schaue mir an wo Sie stehen — online und im Markt. Dann reden wir: 20 Minuten, kein Pitch, keine Agenda ausser Klarheit.",
+  },
+  {
+    num: "02",
+    title: "Strategie & Plan",
+    body: "Ich erarbeite einen konkreten Plan — was, warum, wann. Kein 20-seitiges Deck, sondern klare Prioritäten die sich umsetzen lassen.",
+  },
+  {
+    num: "03",
+    title: "Umsetzung & Reporting",
+    body: "Ich liefere, Sie sehen was passiert. Wöchentliche Updates, monatliche Auswertung — keine Überraschungen, keine schwarzen Boxen.",
+  },
+  {
+    num: "04",
+    title: "Optimierung",
+    body: "Was funktioniert, wird ausgebaut. Was nicht, wird geändert — direkt, ohne Umwege und ohne dass Sie erst nachfragen müssen.",
+  },
+];
+
+const Prozess = () => (
+  <section id="prozess" className="section" data-testid="prozess">
+    <div className="wrap">
+      <div className="section-head">
+        <p className="eyebrow reveal">Zusammenarbeit</p>
+        <h2 className="h2 reveal" style={{ marginTop: "26px" }}>
+          Wie ich <em>arbeite.</em>
+        </h2>
+        <p className="body section-intro reveal">
+          Kein grosses Onboarding, kein Kick-off-Meeting mit zwölf Folien. Ich
+          brauche ein Gespräch — und dann fange ich an.
+        </p>
+      </div>
+      <div className="grid-prozess reveal">
+        {prozessSchritte.map((s, i) => (
+          <div key={i} className="pcard" data-testid={`prozess-${i}`}>
+            <div className="pcard-num">{s.num}</div>
+            <h3 className="pcard-title">{s.title}</h3>
+            <p className="body pcard-body">{s.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const aiLeistungen = [
+  {
+    icon: "✦",
+    label: "Kommunikation",
+    title: "Follow-up & Anfragen automatisieren",
+    body: "Neue Anfragen werden automatisch beantwortet, kategorisiert und weitergeleitet — ohne dass Sie jeden Mail selbst tippen.",
+    tools: ["Claude", "Make.com", "Gmail"],
+  },
+  {
+    icon: "✦",
+    label: "Content",
+    title: "Texte & Exposés generieren",
+    body: "Für Makler, Anwälte und Ärzte: Beschreibungen, Anschreiben und Social Posts entstehen in Minuten statt Stunden — in Ihrer eigenen Sprache.",
+    tools: ["Claude", "ChatGPT", "Notion"],
+  },
+  {
+    icon: "✦",
+    label: "Workflow",
+    title: "Arbeitsabläufe übergeben",
+    body: "Wiederkehrende Aufgaben wie Terminplanung, Dokumentenablage oder Reporting laufen automatisch — Sie konzentrieren sich auf Ihre Kunden.",
+    tools: ["Make.com", "Zapier", "Claude"],
+  },
+];
+
+const AI = () => (
+  <section id="ai" className="section" data-testid="ai">
+    <div className="wrap">
+      <div className="section-head">
+        <p className="eyebrow reveal">AI & Automatisierung</p>
+        <h2 className="h2 reveal" style={{ marginTop: "26px" }}>
+          Mehr Zeit für das, <em>was zählt.</em>
+        </h2>
+        <p className="body section-intro reveal">
+          Ich helfe Professionals dabei, AI-Tools sinnvoll in ihren Alltag zu
+          integrieren — nicht als Spielerei, sondern als echte
+          Arbeitsentlastung. Das kann ein einmaliges Coaching sein oder ein
+          vollständig aufgesetzter Workflow, der im Hintergrund läuft.
+        </p>
+      </div>
+      <div className="grid-ai reveal">
+        {aiLeistungen.map((a, i) => (
+          <div key={i} className="aicard" data-testid={`ai-card-${i}`}>
+            <div className="aicard-head">
+              <span className="aicard-icon">{a.icon}</span>
+              <span className="eyebrow">{a.label}</span>
+            </div>
+            <h3 className="aicard-title">{a.title}</h3>
+            <p className="body aicard-body">{a.body}</p>
+            <div className="aicard-tools">
+              {a.tools.map((t, j) => (
+                <span key={j} className="tool-tag">{t}</span>
+              ))}
             </div>
           </div>
         ))}
@@ -272,6 +379,10 @@ function App() {
       <Hero />
       <hr className="divider" />
       <Leistungen />
+      <hr className="divider" />
+      <Prozess />
+      <hr className="divider" />
+      <AI />
       <hr className="divider" />
       <Referenzen />
       <hr className="divider" />

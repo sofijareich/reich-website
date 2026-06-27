@@ -526,3 +526,120 @@ body {
     text-align: center;
   }
 }
+
+/* ---------- Prozess Section ---------- */
+.grid-prozess {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-top: 60px;
+}
+
+.pcard {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  padding: 36px 28px;
+  position: relative;
+  border-left: 2px solid rgba(196,168,130,0.35);
+}
+
+.pcard-num {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3rem;
+  font-weight: 300;
+  color: rgba(196,168,130,0.15);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.pcard-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35rem;
+  font-weight: 300;
+  color: var(--head);
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+
+.pcard-body {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--body);
+  margin: 0;
+}
+
+/* ---------- AI Section ---------- */
+.grid-ai {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 60px;
+}
+
+.aicard {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  padding: 36px 28px;
+}
+
+.aicard-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.aicard-icon {
+  color: var(--gold);
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+.aicard-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.45rem;
+  font-weight: 300;
+  color: var(--head);
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+
+.aicard-body {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--body);
+  margin: 0 0 20px 0;
+}
+
+.aicard-tools {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tool-tag {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--body);
+  border: 1px solid var(--border);
+  padding: 3px 10px;
+  opacity: 0.7;
+}
+
+/* ---------- Responsive Prozess & AI ---------- */
+@media (max-width: 900px) {
+  .grid-prozess {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-ai {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-prozess {
+    grid-template-columns: 1fr;
+  }
+}
