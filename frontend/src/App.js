@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
 import "@/App.css";
 
-const EMAIL = "hallo@sparkside.ch";
+const EMAIL = "contact@reichstudio.ch";
 const MAILTO =
-  "mailto:hallo@sparkside.ch?subject=Erstgespr%C3%A4ch%20%E2%80%93%2020%20Minuten&body=Guten%20Tag%20Frau%20Reich%2C%0A%0Aich%20w%C3%BCrde%20gerne%20unverbindlich%20pr%C3%BCfen%2C%20ob%20eine%20Zusammenarbeit%20passt.";
+  "mailto:contact@reichstudio.ch?subject=Erstgespr%C3%A4ch%20%E2%80%93%2020%20Minuten&body=Guten%20Tag%20Frau%20Reich%2C%0A%0Aich%20w%C3%BCrde%20gerne%20unverbindlich%20pr%C3%BCfen%2C%20ob%20eine%20Zusammenarbeit%20passt.";
 
 function useReveal() {
   const ref = useRef(null);
@@ -75,7 +75,7 @@ const leistungen = [
   {
     eyebrow: "01 — Sichtbarkeit",
     title: "SEO & Sichtbarkeit",
-    body: "Wer Sie sucht, soll Sie finden — und wer Sie noch nicht kennt, soll auf Sie stossen. Ich baue eine Sichtbarkeit auf, die zu Ihrem Anspruch passt: fundiert, technisch sauber und auf die Mandate ausgerichtet, die Sie wirklich gewinnen möchten.",
+    body: "Wer Sie sucht, soll Sie finden. Ich baue eine Sichtbarkeit auf, die zu Ihrem Anspruch passt: fundiert, technisch sauber und auf die Kunden ausgerichtet, die Sie wirklich gewinnen möchten.",
     span: "lcard-lg",
   },
   {
@@ -135,17 +135,17 @@ const referenzen = [
   {
     name: "Hotel Sempachersee",
     tag: "Event Content · Kanton Luzern",
-    desc: "Content Creation für einen Hospitality-Event — Bild- und Videomaterial das zeigt, wie ein Anlass wirkt wenn er professionell festgehalten wird. Entstanden im Rahmen eines LUKB-Events.",
+    desc: "Foto- und Videoaufnahmen für einen Hospitality-Event. Professionelle Bar-Shots und kurze Videosequenzen, die zeigen wie ein Anlass wirkt wenn er gut festgehalten wird.",
   },
   {
     name: "All In One Bar",
-    tag: "Web & Social Media",
-    desc: "Website-Relaunch und Social-Media-Content für eine Gastro-Location in der Region. Erstes Projekt, das zeigt wie digitale Präsenz und lokale Reichweite zusammenspielen.",
+    tag: "Foto & Video · Gastro",
+    desc: "Professionelle Bar-Shots und ein Testvideo für Social Media. Visuelles Material das den Charakter des Ortes zeigt und für die digitale Kommunikation eingesetzt werden kann.",
   },
   {
-    name: "SwissUnited",
-    tag: "Laufend · Finanzdienstleister",
-    desc: "Fortlaufende Zusammenarbeit an Sichtbarkeit und digitaler Positionierung. Ein Mandat, das zeigt wie sich kontinuierliche Arbeit über die Zeit in Substanz übersetzt.",
+    name: "Finanzberatung · Deutschschweiz",
+    tag: "Laufend · Digitale Positionierung",
+    desc: "Fortlaufende Zusammenarbeit mit einem unabhängigen Finanzberater in der Deutschschweiz. Aufbau der digitalen Sichtbarkeit und schrittweise Optimierung über mehrere Monate.",
   },
 ];
 
@@ -155,7 +155,7 @@ const Referenzen = () => (
       <div className="section-head">
         <p className="eyebrow reveal">Referenzen</p>
         <h2 className="h2 reveal" style={{ marginTop: "26px" }}>
-          Wenige Mandate, <em>mit Tiefe.</em>
+          Wenige Projekte, <em>mit Tiefe.</em>
         </h2>
       </div>
       <div className="ref-list">
@@ -181,22 +181,22 @@ const prozessSchritte = [
   {
     num: "01",
     title: "Analyse & Gespräch",
-    body: "Ich schaue mir an wo Sie stehen — online und im Markt. Dann reden wir: 20 Minuten, kein Pitch, keine Agenda ausser Klarheit.",
+    body: "Ich schaue mir an wo Sie stehen, online und im Markt. Dann reden wir. Zwanzig Minuten reichen meistens, um zu verstehen worum es wirklich geht.",
   },
   {
     num: "02",
     title: "Strategie & Plan",
-    body: "Ich erarbeite einen konkreten Plan — was, warum, wann. Kein 20-seitiges Deck, sondern klare Prioritäten die sich umsetzen lassen.",
+    body: "Ich erarbeite einen konkreten Plan mit klaren Prioritäten. Was zuerst, warum und bis wann. Das passt auf eine Seite und nicht in eine Präsentation.",
   },
   {
     num: "03",
     title: "Umsetzung & Reporting",
-    body: "Ich liefere, Sie sehen was passiert. Wöchentliche Updates, monatliche Auswertung — keine Überraschungen, keine schwarzen Boxen.",
+    body: "Ich liefere und halte Sie auf dem Laufenden. Kurze Updates wenn etwas passiert, monatlich ein Überblick mit echten Zahlen. Sie müssen nicht nachfragen.",
   },
   {
     num: "04",
     title: "Optimierung",
-    body: "Was funktioniert, wird ausgebaut. Was nicht, wird geändert — direkt, ohne Umwege und ohne dass Sie erst nachfragen müssen.",
+    body: "Was funktioniert, bauen wir aus. Was nicht funktioniert, ändern wir. Das ist keine grosse Sache, das ist einfach wie gute Zusammenarbeit aussieht.",
   },
 ];
 
@@ -209,8 +209,8 @@ const Prozess = () => (
           Wie ich <em>arbeite.</em>
         </h2>
         <p className="body section-intro reveal">
-          Kein grosses Onboarding, kein Kick-off-Meeting mit zwölf Folien. Ich
-          brauche ein Gespräch — und dann fange ich an.
+          Ich brauche kein grosses Onboarding. Ein Gespräch reicht, um zu
+          verstehen was Sie brauchen. Danach fange ich an.
         </p>
       </div>
       <div className="grid-prozess reveal">
@@ -230,22 +230,22 @@ const aiLeistungen = [
   {
     icon: "✦",
     label: "Kommunikation",
-    title: "Follow-up & Anfragen automatisieren",
-    body: "Neue Anfragen werden automatisch beantwortet, kategorisiert und weitergeleitet — ohne dass Sie jeden Mail selbst tippen.",
-    tools: ["Claude", "Make.com", "Gmail"],
+    title: "Anfragen automatisch bearbeiten",
+    body: "Neue Anfragen werden automatisch beantwortet, kategorisiert und weitergeleitet. Sie müssen sich nicht mehr durch jede eingehende E-Mail arbeiten.",
+    tools: ["Claude", "Make.com", "E-Mail"],
   },
   {
     icon: "✦",
     label: "Content",
     title: "Texte & Exposés generieren",
-    body: "Für Makler, Anwälte und Ärzte: Beschreibungen, Anschreiben und Social Posts entstehen in Minuten statt Stunden — in Ihrer eigenen Sprache.",
+    body: "Für Makler, Anwälte und Ärzte: Beschreibungen, Anschreiben und Social Posts entstehen in Minuten statt Stunden, in Ihrer eigenen Sprache und Ihrem eigenen Stil.",
     tools: ["Claude", "ChatGPT", "Notion"],
   },
   {
     icon: "✦",
     label: "Workflow",
     title: "Arbeitsabläufe übergeben",
-    body: "Wiederkehrende Aufgaben wie Terminplanung, Dokumentenablage oder Reporting laufen automatisch — Sie konzentrieren sich auf Ihre Kunden.",
+    body: "Terminplanung, Dokumentenablage, Reporting. Alles was sich wiederholt, lässt sich automatisieren. Sie konzentrieren sich auf Ihre Kunden, der Rest läuft im Hintergrund.",
     tools: ["Make.com", "Zapier", "Claude"],
   },
 ];
@@ -320,11 +320,11 @@ const UeberMich = () => (
             </p>
             <p className="reveal">
               Weil das nur funktioniert, wenn man wirklich nah dran ist, bleibt
-              die Zahl der Mandate bewusst klein.
+              die Zahl der Projekte bewusst klein.
             </p>
           </div>
           <p className="muted-note about-note reveal" data-testid="about-note">
-            Aktuell nehme ich ausgewählte Mandate an.
+            Aktuell nehme ich neue Kunden an.
           </p>
         </div>
       </div>
